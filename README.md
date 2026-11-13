@@ -15,12 +15,17 @@ A Java Swing desktop application for managing students, courses, enrollments, an
 
 - Java Development Kit (JDK) 8 or later
 
-## Run
-
-From the project directory in PowerShell:
+## Run from the GitHub repository root
 
 ```powershell
 New-Item -ItemType Directory -Force out | Out-Null
+javac -d out Main.java Student.java Course.java StudentManagementFrame.java
+java -cp out Main
+```
+
+In the original workspace, the Java files are under `src`, so include that folder in the compile command:
+
+```powershell
 javac -d out src\Main.java src\Student.java src\Course.java src\StudentManagementFrame.java
 java -cp out Main
 ```
